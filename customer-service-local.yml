@@ -1,0 +1,29 @@
+server:
+  port: 8097    #default port where the service will be started
+
+eureka:         #tells about the Eureka server details and its refresh time
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+
+spring:     
+  application:
+    name: customer-service   #current service name to be used by the eureka server
+  cloud:
+    config:
+      uri: http://127.0.0.1:8101/
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerdb
+    username: pranaya
+    password: pranay@123
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+        ddl-auto: update
+    show-sql: true    
+user: Pranaya
+password: Pranaya
