@@ -1,0 +1,22 @@
+server:
+  port: 8096    #default port where the service will be started
+
+spring:     
+  application:
+    name: review-service   #current service name to be used by the eureka server
+  cloud:
+    config:
+      uri: http://config-server:8101/
+  datasource:
+    url: jdbc:mysql://localhost:3306/reviewdb?serverTimezone=UTC
+    username: pranaya
+    password: pranay@123
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+        ddl-auto: update
+    show-sql: true    
+user: Pranaya
+password: Pranaya
