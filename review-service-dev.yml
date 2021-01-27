@@ -8,7 +8,7 @@ spring:
     config:
       uri: http://config-server:8101/
   datasource:
-    url: jdbc:mysql://localhost:3306/reviewdb?serverTimezone=UTC
+    url: jdbc:mysql://mysql-review:3306/reviewdb?serverTimezone=UTC
     username: pranaya
     password: pranay@123
   jpa:
